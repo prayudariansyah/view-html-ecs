@@ -10,7 +10,8 @@
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="mySide">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="kembali">
                 <img src="/images/akar-icons_arrow-left.png" alt="">
                 <a href="#">Kembali</a>
@@ -39,7 +40,8 @@
                 </ul>
             </div>
         </aside>
-        <div class="content">
+        <span class="open" onclick="openNav()">&#9776;</span>
+        <div class="content" id="main">
             <div class="title">
                 <h4>Chapter 1 : Reading, Writing and Speaking</h4>                
             </div>
@@ -95,5 +97,14 @@
             <button class="btn">Next</button>
         </div>
     </div>
+    <script>
+        function openNav() {
+          document.getElementById("mySide").style.width = "281px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySide").style.width = "0";
+        }
+        </script>
 </body>
 </html>
